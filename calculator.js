@@ -45,10 +45,24 @@ class Calculator {
 		return () => {
 			this._display.innerHTML = '';	
 			this.reInitExpression('');	
-			this.errorMsg = '';
-			this._error.innerHTML = '';	
+			this.clearErrorMsg();			
 		}
 		
+	}
+
+	delete() {
+		return () => {
+			if (this.expression) {
+				this.reInitExpression(this.expression.split('').splice(0, this.expression.split('').length-1).join(''));
+				this.displayExpression();
+				this.clearErrorMsg();				
+			}
+		}
+	}
+
+	clearErrorMsg() {
+		this.errorMsg = '';
+		this._error.innerHTML = '';
 	}
 
 	calculate() {
@@ -92,8 +106,7 @@ class Calculator {
 
 			// Clear deivision by 0 message if it appears
 			if (this.errorMsg) {
-				this.errorMsg = '';
-				this._error.innerHTML = '';
+				this.clearErrorMsg();				
 			}
 
 			// Check the expression for invalid input operators
@@ -174,6 +187,8 @@ let init = () => {
 			calculator.actions[i].addEventListener('click', calculator.clear());
 		} else if (calculator.actions[i].classList.contains('equals')) {
 			calculator.actions[i].addEventListener('click', calculator.calculate());
+		} else if (calculator.actions[i].classList.contains('delete')) {
+			calculator.actions[i].addEventListener('click', calculator.delete());
 		} else {
 			calculator.actions[i].addEventListener('click', calculator.validateExpression(calculator.actions[i]));
 		}

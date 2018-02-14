@@ -19,6 +19,10 @@
 	background-color: #d54134;
 }
 
+.delete {
+	background-color: #d59234;
+}
+
 .equals {
 	background-color: #3f9e42;
 }
@@ -67,6 +71,11 @@
 	cursor: pointer;
 }
 
+.delete:hover {
+	background-color: #aa7429;
+	cursor: pointer;
+}
+
 .brand {
 	text-align: left;
 	color: white;
@@ -87,3 +96,7 @@
 .display-wrapper {
 	position: relative;
 }
+
+.delete-btn-wrapper, .clear-btn-wrapper {
+	padding: 10px 5px !important;
+} 
