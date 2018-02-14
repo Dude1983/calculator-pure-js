@@ -1,0 +1,89 @@
+.wrapper {
+	max-width: 400px;
+	margin: 20px auto;
+	background-color: #3F475B;
+}
+
+.display {
+	background-color: #828A9B;
+	min-height: 45px;
+	padding: 10px 0;
+	text-align: right;
+	font-size: 18px;
+	color: white;
+	padding-right: 6px;
+	overflow: hidden;
+}
+
+.clear {
+	background-color: #d54134;
+}
+
+.equals {
+	background-color: #3f9e42;
+}
+
+.blue {
+	background-color: #00aeef;
+}
+
+.grey {
+	background-color: #d1d2d4;
+}
+
+.row > div {
+	padding: 10px;
+	text-align: center;
+}
+
+.row {
+	margin: 0;
+}
+
+.button {
+	min-height: 40px;
+	padding: 10px 0;
+	border-radius: 5px;
+	font-size: 17px;
+}
+
+.grey:hover {
+	background-color: #929394;
+	cursor: pointer;
+}
+
+.blue:hover {
+	background-color: #0079a7;
+	cursor: pointer;
+}
+
+.equals:hover {
+	background-color: #2c6e2e;
+	cursor: pointer;
+}
+
+.clear:hover {
+	background-color: #952d24;
+	cursor: pointer;
+}
+
+.brand {
+	text-align: left;
+	color: white;
+	font-family: Eurostile Ext Black;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 19px;
+}
+
+.division-by-zero-msg {
+	color: #d54134;
+	font-weight: bold;
+	position: absolute;
+	top: 36px;
+	right: 15px;
+}
+
+.display-wrapper {
+	position: relative;
+}
