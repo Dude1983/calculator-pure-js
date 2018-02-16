@@ -79,6 +79,11 @@ class Calculator {
 				return;
 			}
 
+			// If empty expression
+			if (!this.expression) {
+				return;
+			}
+
 			// In case of division by 0
 			if (!Number.isFinite(eval(this.expression))) {
 				this.errorMsg = "Can't divide by 0";
